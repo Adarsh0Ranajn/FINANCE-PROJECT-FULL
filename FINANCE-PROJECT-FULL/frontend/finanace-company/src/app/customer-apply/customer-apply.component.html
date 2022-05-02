@@ -1,0 +1,47 @@
+<div>
+    <div *ngIf="G1">
+    <h2>Loan Application Form</h2>
+    <form [formGroup]="dataref"  (ngSubmit)="customer()">
+    <table>
+    <tr>
+        <td><label><p class="font-weight-bold">Customer ID</p></label></td>
+        <td><input type="text" formControlName="_id"></td>
+    </tr>  
+    <tr>
+       <td><label><p class="font-weight-bold">Customer Name</p></label></td>
+       <td><input type="text" formControlName="cname"></td> 
+    </tr>
+    <tr>
+        <td><label><p class="font-weight-bold">Customer Phone</p></label></td>
+        <td><input type="text" formControlName="cphnumber"></td> 
+     </tr>
+     <tr>
+        <td><label><p class="font-weight-bold">Customer Gender</p></label></td>
+        <td><input type="text" formControlName="cgender"></td> 
+     </tr>
+     
+    <tr>
+        <td><label><p class="font-weight-bold">Loan ID</p></label></td>
+        <td><input type="number" formControlName="loan_id"></td>
+    </tr>
+    <tr>
+       <td><label><p class="font-weight-bold">Loan Type</p></label></td>
+       <td><input type="text" formControlName="loan_type"></td> 
+    </tr>
+    <tr>
+        <td><label><p class="font-weight-bold">Loan Amount</p></label></td>
+        <td><input type="text" formControlName="loan_amt"></td> 
+     </tr>
+     
+     
+    <tr>
+        <td><input  type="submit" value="submit" class="button2" ></td>
+        <td><input type="reset" value="reset" class="button3"></td>
+        
+    </tr>
+  
+  </table>
+  </form>
+  {{msg}}
+  </div>
+  </div>

@@ -1,0 +1,69 @@
+<div>
+    <div *ngIf="k1">
+        <h2>Welcome to Customer-Login Page</h2>
+        <form [formGroup]="custLogInRef" (ngSubmit)="checkUser()">
+        <table>
+        
+        <tr>
+            <td><label><p class="font-weight-bold">Username</p></label></td>
+            <td><input type="text" formControlName="user"></td>
+        </tr>
+        <tr>
+           <td><label><p class="font-weight-bold">Password</p></label></td>
+           <td><input type="password" formControlName="pass"></td> 
+        </tr>
+        <tr>
+            <td><input class="button1" type="submit" value="submit" ></td>
+            <td><input class="button2" type="reset" value="reset" ></td>
+        </tr>
+    </table>
+    </form>
+    
+    </div>
+    <div *ngIf="k2">
+        <table>
+            <tr>
+            <td><h4>Services</h4></td><br/>
+            </tr>
+            <tr><td><button class="button1" (click)="apply()">APPLY FOR NEW LOAN</button></td></tr><br/>
+            <tr><td><button class="button3" (click)="status2()">STATUS OF LOAN</button></td></tr><br/>
+           </table>
+    </div>
+    <p *ngIf="e1">
+        <app-customer-apply></app-customer-apply>
+    </p>
+    <div *ngIf="e8">
+        
+        <Label>Enter name of applicant</Label>
+        <input type="text" #useridr>
+        <input type="submit" value="Submit" (click)="status29(useridr)">
+
+        <table border="1" class="table table-striped">
+            <tr>
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+                <th>Customer Phone</th>
+                <th>Customer Gender</th>
+                <th>Loan Id</th>
+                <th>Loan Type</th>
+                <th>Loan Amount</th>
+                <th>Status</th>
+           </tr>
+            <tr *ngFor="let cus of customers">
+                    <td>{{cus._id}}</td>
+                    <td>{{cus.cname }}</td>
+                    <td>{{cus.cphnumber}}</td>
+                    <td>{{cus.cgender}}</td>
+                    <td>{{cus.loan_id}}</td>
+                    <td>{{cus.loan_type}}</td>
+                    <td>{{cus.loan_amt}}</td>
+                    <td>{{cus.status}}</td>
+            </tr>
+            </table>
+    </div>
+    
+    
+    
+    </div>
+    
+    

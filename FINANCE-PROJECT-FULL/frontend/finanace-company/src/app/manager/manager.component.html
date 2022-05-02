@@ -1,0 +1,31 @@
+<div>
+    <table border="1" class="table table-striped">
+      <tr>
+          <th>Customer Id</th>
+          <th>Customer Name</th>
+          <th>Customer Phone</th>
+          <th>Customer Gender</th>
+          <th>Loan Id</th>
+          <th>Loan Type</th>
+          <th>Loan Amount</th>
+          <th>Accept Loan</th>
+          <th>Reject Loan</th>
+          
+
+
+     </tr>
+      <tr *ngFor="let cus of customers">
+              <td>{{cus._id}}</td>
+              <td>{{cus.cname }}</td>
+              <td>{{cus.cphnumber}}</td>
+              <td>{{cus.cgender}}</td>
+              <td>{{cus.loan_id}}</td>
+              <td>{{cus.loan_type}}</td>
+              <td>{{cus.loan_amt}}</td>
+              <td><input type="button" value="Accept loan" (click)="ace(cus)" class="button2"></td>
+              <td><input type="button" value="Reject loan" (click)="del(cus)" class="button1"></td>
+              
+              
+      </tr>
+  </table>
+</div>
